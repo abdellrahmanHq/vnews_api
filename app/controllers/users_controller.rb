@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  def count
+    render json:{count: User.count}
+  end
+
   # POST /signup
   def create
     user = User.new(user_params)
